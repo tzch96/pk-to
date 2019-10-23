@@ -9,7 +9,6 @@ public class Calculator implements ICalc {
 		System.out.println("Wpisz \"exit\", żeby wyjść z programu");
 	}
 
-	@Override
 	public void calculateResult(double firstNumber, String operand, double secondNumber) {
 		switch (operand) {
 		case "+":
@@ -38,7 +37,7 @@ public class Calculator implements ICalc {
 		}
 	}
 
-	@Override
+        @Override
 	public void start() {
 		String operation;
 		double firstNumber, secondNumber;
