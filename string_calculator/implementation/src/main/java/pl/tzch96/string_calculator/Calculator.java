@@ -1,4 +1,4 @@
-package pl.tzch96.string-calculator;
+package pl.tzch96.string_calculator;
 
 public class Calculator
 {
