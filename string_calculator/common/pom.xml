@@ -11,7 +11,7 @@
   <artifactId>common</artifactId>
   <version>0.1.0</version>
 
-  <name>implementation</name>
+  <name>common</name>
   <url>https://github.com/tzch96/pk-to</url>
 
   <properties>

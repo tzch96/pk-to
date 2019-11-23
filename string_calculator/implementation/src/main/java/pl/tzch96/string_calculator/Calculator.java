@@ -1,10 +1,14 @@
 package pl.tzch96.string_calculator;
 
-public class Calculator
+public class Calculator implements ICalculator
 {
 
-    public static void main(String[] args)
-    {
+    public Calculator() {
 
+    }
+
+    public static void start()
+    {
+        System.out.println("Start");
     }
 }

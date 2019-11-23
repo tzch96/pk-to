@@ -3,4 +3,8 @@ A calculator which takes a string input with a mathematical expression of any le
 
 ### Install
 
+```bash
+[string_calculator]$ mvn package
+```
+
 ### Run
