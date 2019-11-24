@@ -12,10 +12,12 @@ public class ShuntingYard {
     private static List<String> supportedOperators = Arrays.asList("+", "-", "*", "/");
     private static Map<String, Integer> operatorPrecedence = new HashMap<String, Integer>() {
         {
-            put("*", 2);
-            put("/", 2);
-            put("+", 1);
-            put("-", 1);
+            put("*", 3);
+            put("/", 3);
+            put("+", 2);
+            put("-", 2);
+            put("(", 1);
+            put(")", 0);
         }
     };
 
@@ -52,7 +54,6 @@ public class ShuntingYard {
             } else if (isFunction(token)) {
                 operatorStack.push(token);
             } else if (isOperator(token)) {
-                // TODO fix this to correctly check if stack is not null
                 while ((isFunction(operatorStack.peek()) || getPrecedence(token) <= getPrecedence(operatorStack.peek())) &&
                         !operatorStack.peek().equals("(")) {
                     postfix.add(operatorStack.pop());
