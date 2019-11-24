@@ -5,4 +5,5 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
+- Added an expression tokenizer to convert an input string to an ArrayList of tokens
 - 
