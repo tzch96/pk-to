@@ -8,16 +8,16 @@
   </parent>
 
   <groupId>pl.tzch96.string_calculator</groupId>
-  <artifactId>implementation</artifactId>
+  <artifactId>main</artifactId>
   <version>0.1.0</version>
 
-  <name>implementation</name>
+  <name>main</name>
   <url>https://github.com/tzch96/pk-to</url>
 
   <dependencies>
     <dependency>
       <groupId>pl.tzch96.string_calculator</groupId>
-      <artifactId>common</artifactId>
+      <artifactId>implementation</artifactId>
       <version>0.1.0</version>
     </dependency>
   </dependencies>
@@ -27,4 +27,31 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>pl.tzch96.string_calculator.App</mainClass>
+            </manifest>
+          </archive>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+        </configuration>
+        <executions>
+          <execution>
+            <id>make-assembly</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 </project>
