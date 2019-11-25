@@ -22,3 +22,11 @@ The calculator works as follows:
 ```
 
 ### Run
+
+```bash
+[string_calculator]$ java -jar main/target/main-0.1.0-jar-with-dependencies.jar
+```
+or
+```bash
+[string_calculator]$ ./run.sh
+```
