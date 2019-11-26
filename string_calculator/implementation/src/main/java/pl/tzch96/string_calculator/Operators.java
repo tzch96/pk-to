@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 public class Operators {
 
-    private static List<String> supportedOperators = Arrays.asList("+", "-", "*", "/");
+    private static HashSet<String> supportedOperators = Arrays.asList("+", "-", "*", "/");
     private static Map<String, Integer> operatorPrecedence = new HashMap<String, Integer>() {
         {
             put("*", 3);

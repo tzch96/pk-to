@@ -7,11 +7,11 @@ import java.util.regex.Matcher;
 
 public class ExpressionTokenizer {
 
-    private static Pattern pattern = Pattern.compile("-?[0-9.]+|[-+*/()]|[A-Za-z]+");
+    private static Pattern mathExpressionPattern = Pattern.compile("-?[0-9.]+|[-+*/()]|[A-Za-z]+");
 
     public static ArrayList<String> tokenize(String input) {
-        ArrayList<String> tokenized = new ArrayList<String>();
-        Matcher match = pattern.matcher(input);
+        List<String> tokenized = new ArrayList<String>();
+        Matcher match = mathExpressionPattern.matcher(input);
 
         while (match.find()) {
             tokenized.add(match.group());

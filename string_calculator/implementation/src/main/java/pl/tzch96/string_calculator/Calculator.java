@@ -5,6 +5,9 @@ import java.util.ArrayList;
 
 public class Calculator implements ICalculator
 {
+
+    private final static String EXIT_COMMAND = "exit";
+
     private void startText() {
         System.out.println("Enter a mathematical expression or type \"exit\" to quit the program:");
     }
@@ -19,7 +22,7 @@ public class Calculator implements ICalculator
 
             expression = sc.nextLine();
 
-            if (expression.equals("exit")) {
+            if (expression.equals(EXIT_COMMAND)) {
                 break;
             }
 
