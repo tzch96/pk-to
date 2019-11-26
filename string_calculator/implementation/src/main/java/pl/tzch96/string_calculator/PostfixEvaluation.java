@@ -14,17 +14,17 @@ public class PostfixEvaluation extends Operators {
                 result = firstOperand + secondOperand;
                 break;
             case '-':
-                result = firstOperand - secondOperand;
+                result = secondOperand - firstOperand;
                 break;
             case '*':
                 result = firstOperand * secondOperand;
                 break;
             case '/':
                 try {
-                    if (secondOperand == 0) {
+                    if (firstOperand == 0) {
                         throw new ArithmeticException();
                     }
-                    result = firstOperand / secondOperand;
+                    result = secondOperand / firstOperand;
                     break;
                 } catch (Exception e) {
                     System.out.println("Division by 0");
