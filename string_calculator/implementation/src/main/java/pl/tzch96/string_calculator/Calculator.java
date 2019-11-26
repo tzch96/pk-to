@@ -27,7 +27,9 @@ public class Calculator implements ICalculator
             }
 
             ArrayList<String> tokenized = ExpressionTokenizer.tokenize(expression);
+            System.out.println(tokenized);
             ArrayList<String> postfixed = ShuntingYard.infixToPostfix(tokenized);
+            System.out.println(postfixed);
 
             Double result = PostfixEvaluation.evaluate(postfixed);
 

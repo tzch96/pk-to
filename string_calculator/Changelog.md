@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 0.2.0 - 2019-11-
+
+### Added
+
+- Added support for single-argument functions (TODO fix precedence), currently defined in Functions.java
+
 ## 0.1.0 - 2019-11-25
 
 ### Added
