@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>pl.tzch96.string_calculator</groupId>
   <artifactId>string_calculator</artifactId>
-  <version>0.1.0</version>
+  <version>0.2.0</version>
   <packaging>pom</packaging>
     
   <name>string_calculator</name>
