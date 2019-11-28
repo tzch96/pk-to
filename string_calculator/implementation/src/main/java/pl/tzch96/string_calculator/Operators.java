@@ -64,16 +64,16 @@ public class Operators {
             case '/':
                 try {
                     if (rightOperand == 0) {
-                        throw new ArithmeticException();
+                        throw new IllegalArgumentException();
                     }
                     result = leftOperand / rightOperand;
                     break;
-                } catch (Exception e) {
+                } catch (IllegalArgumentException e) {
                     System.out.println("Division by 0");
                     break;
                 }
             default:
-                System.out.println("Unsupported operator");
+                System.out.println("Unsupported operator " + op);
                 break;
         }
 

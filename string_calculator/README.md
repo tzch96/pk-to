@@ -11,6 +11,7 @@ The calculator works as follows:
     * brackets: ( and )
     * functions: any sequence of letters, upper- or lowercase
     * spaces are ignored
+    Note on using ```-```: when followed by a space (e.g. ```- 5```, it is parsed as the subtraction operator; when followed immediately by a number (e.g. ```-5```, the number is parsed as a negative number  
 3. Convert the tokenized input from infix to postfix notation using the [shunting yard algorithm](https://en.wikipedia.org/wiki/Shunting-yard_algorithm)
 4. Calculate the postfix expression using a [stack-based evaluation algorithm](https://en.wikipedia.org/wiki/Reverse_Polish_notation#Postfix_evaluation_algorithm)
 5. Output the result.
@@ -24,7 +25,7 @@ The calculator works as follows:
 ### Run
 
 ```bash
-[string_calculator]$ java -jar main/target/main-0.1.0-jar-with-dependencies.jar
+[string_calculator]$ java -jar main/target/main-0.2.0-jar-with-dependencies.jar
 ```
 or
 ```bash

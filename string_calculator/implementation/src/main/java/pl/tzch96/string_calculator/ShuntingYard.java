@@ -2,6 +2,7 @@ package pl.tzch96.string_calculator;
 
 import java.util.ArrayList;
 import java.util.Stack;
+import java.util.Collections;
 
 public class ShuntingYard extends Operators {
 
@@ -43,6 +44,8 @@ public class ShuntingYard extends Operators {
             }
 
             operatorStack.removeAll(toRemove);
+
+            Collections.reverse(toRemove);
             postfix.addAll(toRemove);
         }
 

@@ -7,10 +7,11 @@ All notable changes to this project will be documented in this file.
 
 - Moved two-argument operation calculation function to Operators class
 - Renamed operands for two-argument operations as leftOperand and rightOperand
+- Edited exception throwing when dividing by zero
 
 ### Added
 
-- Added support for single-argument functions (TODO fix precedence), currently defined in Functions.java
+- Added support for single-argument functions, currently defined in Functions.java
 
 ## 0.1.0 - 2019-11-25
 
