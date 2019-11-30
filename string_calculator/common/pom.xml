@@ -4,12 +4,12 @@
   <parent>
     <artifactId>string_calculator</artifactId>
     <groupId>pl.tzch96.string_calculator</groupId>
-    <version>0.2.0</version>
+    <version>0.3.0</version>
   </parent>
 
   <groupId>pl.tzch96.string_calculator</groupId>
   <artifactId>common</artifactId>
-  <version>0.2.0</version>
+  <version>0.3.0</version>
 
   <name>common</name>
   <url>https://github.com/tzch96/pk-to</url>

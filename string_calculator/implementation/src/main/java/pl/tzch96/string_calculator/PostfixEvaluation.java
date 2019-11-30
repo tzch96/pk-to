@@ -2,7 +2,6 @@ package pl.tzch96.string_calculator;
 
 import java.util.ArrayList;
 import java.util.Stack;
-import java.lang.reflect.*;
 
 public class PostfixEvaluation extends Operators {
 
@@ -20,17 +19,7 @@ public class PostfixEvaluation extends Operators {
 
                 operands.push(result);
             } else if (isFunction(token)) {
-                try {
-                    Method function = Functions.class.getMethod(token, Double.class);
-                    Double result = (Double) function.invoke(null, operands.pop());
-                    operands.push(result);
-                } catch (NoSuchMethodException e) {
-                    System.out.println("Undefined function " + token);
-                } catch (IllegalAccessException e) {
-                    System.out.println("Illegal access to function " + token);
-                } catch (InvocationTargetException e) {
-                    System.out.println("Invocation target exception");
-                }
+                // TODO parse function loaded from jar
             }
         }
 

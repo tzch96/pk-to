@@ -1,7 +1,21 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## 0.2.0 - 2019-11-
+## 0.3.0 - 2019-12-
+
+### Changed
+
+- Moved functions to plugins folder as compiled jars
+
+### Added
+
+- 
+
+### Removed
+
+- Removed Functions class
+
+## 0.2.0 - 2019-11-28
 
 ### Changed
 
