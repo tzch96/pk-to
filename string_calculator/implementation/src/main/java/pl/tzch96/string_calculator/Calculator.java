@@ -7,6 +7,18 @@ public class Calculator implements ICalculator
 {
 
     private final static String EXIT_COMMAND = "exit";
+    private static Calculator instance = null;
+
+
+    private Calculator() { // empty constructor just to set it to private
+    }
+
+    public static Calculator getInstance() { // if there is already a instance of Calculator, return it
+        if (instance == null) {
+            instance = new Calculator();
+        }
+        return instance;
+    }
 
     private void startText() {
         System.out.println("Enter a mathematical expression or type \"exit\" to quit the program:");

@@ -5,7 +5,7 @@ public class App
 
     public static void main(String[] args)
     {
-        Calculator calculator = new Calculator();
+        Calculator calculator = Calculator.getInstance();
 
         calculator.start();
     }
