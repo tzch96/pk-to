@@ -38,12 +38,10 @@ public class Calculator implements ICalculator
                 break;
             }
 
-            ArrayList<String> tokenized = ExpressionTokenizer.tokenize(expression);
-            System.out.println(tokenized);
-            ArrayList<String> postfixed = ShuntingYard.infixToPostfix(tokenized);
-            System.out.println(postfixed);
+            ArrayList<String> tokenizedExpression = ExpressionTokenizer.tokenize(expression);
+            ArrayList<String> postfixExpression = ShuntingYard.infixToPostfix(tokenizedExpression);
 
-            Double result = PostfixEvaluation.evaluate(postfixed);
+            Double result = PostfixEvaluation.evaluate(postfixExpression);
 
             System.out.println("Result: " + result);
         }
