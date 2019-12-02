@@ -41,9 +41,9 @@ public class PostfixEvaluation extends Operators {
                     Object functionResult = method.invoke(instance, operands.pop());
                     operands.push((Double) functionResult);
                 } catch (ClassNotFoundException e) {
-                    System.out.println("Class " + toLoad + " not found in plugins directory");
+                    System.out.println("Class " + token + " not found in plugins directory");
                 } catch (NoSuchMethodException e) {
-                    System.out.println("Method calculate not found in " + functionClass + " class");
+                    System.out.println("Method calculate not found in " + token + " class");
                 } catch (InstantiationException e) {
                     e.printStackTrace();
                 } catch (IllegalAccessException e) {
