@@ -21,6 +21,10 @@ The calculator works as follows:
 ```bash
 [string_calculator]$ mvn package
 ```
+or
+```bash
+[string_calculator]$ mvn clean install
+```
 
 ### Run
 

@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - Moved functions to plugins folder as compiled jars
+- Changed code to use Singleton creational pattern
 
 ### Added
 
