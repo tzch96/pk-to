@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## 0.3.0 - 2019-12-02
+## 0.3.0 - 2019-12-18
 
 ### Changed
 
@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - Dynamically loading function plugins at runtime
+- Log4j2 error logger
 
 ### Removed
 

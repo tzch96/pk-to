@@ -5,7 +5,13 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Arrays;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.Level;
+
 public class Operators {
+
+    private static Logger rfLogger = LogManager.getLogger("RollingFileLogger");
 
     private static List<String> supportedOperators = Arrays.asList("+", "-", "*", "/");
     private static List<String> twoArgumentOperators = Arrays.asList("+", "-", "*", "/");
@@ -69,7 +75,7 @@ public class Operators {
                     result = leftOperand / rightOperand;
                     break;
                 } catch (IllegalArgumentException e) {
-                    System.out.println("Division by 0");
+                    rfLogger.log(Level.getLevel("INFO"), "Division by 0");
                     break;
                 }
             default:
