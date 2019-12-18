@@ -14,7 +14,7 @@ import org.apache.logging.log4j.Level;
 
 public class PostfixEvaluation extends Operators {
 
-    private static Logger rfLogger = LogManager.getLogger("RollingFileLogger");
+    private static Logger fileLogger = LogManager.getLogger("PostfixEvaluation");
 
     public static Double evaluate(ArrayList<String> postfix) {
         URLClassLoader functionPluginLoader = null;
@@ -22,7 +22,7 @@ public class PostfixEvaluation extends Operators {
         try {
             functionPluginLoader = URLClassLoader.newInstance(new URL[]{new URL("file:plugins/SingleArgFunctions.jar")});
         } catch (MalformedURLException e) {
-            rfLogger.log(Level.getLevel("ERROR"), e);
+            fileLogger.log(Level.getLevel("ERROR"), e);
         }
 
         Stack<Double> operands = new Stack<Double>();
@@ -47,17 +47,15 @@ public class PostfixEvaluation extends Operators {
                     Object functionResult = method.invoke(instance, operands.pop());
                     operands.push((Double) functionResult);
                 } catch (ClassNotFoundException e) {
-                    rfLogger.log(Level.getLevel("ERROR"), "Class" + token + " not foud in plugins directory");
-                    System.out.println("Class " + token + " not found in plugins directory");
+                    fileLogger.log(Level.getLevel("ERROR"), "Class " + token + " not found in plugins directory");
                 } catch (NoSuchMethodException e) {
-                    rfLogger.log(Level.getLevel("ERROR"), "Method calculate not found in " + token + " class");
-                    System.out.println("Method calculate not found in " + token + " class");
+                    fileLogger.log(Level.getLevel("ERROR"), "Method calculate not found in " + token + " class");
                 } catch (InstantiationException e) {
-                    rfLogger.log(Level.getLevel("ERROR"), e);
+                    fileLogger.log(Level.getLevel("ERROR"), e);
                 } catch (IllegalAccessException e) {
-                    rfLogger.log(Level.getLevel("ERROR"), e);
+                    fileLogger.log(Level.getLevel("ERROR"), e);
                 } catch (InvocationTargetException e) {
-                    rfLogger.log(Level.getLevel("ERROR"), e);
+                    fileLogger.log(Level.getLevel("ERROR"), e);
                 }
             }
         }

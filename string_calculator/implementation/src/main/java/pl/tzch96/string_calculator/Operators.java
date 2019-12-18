@@ -11,7 +11,7 @@ import org.apache.logging.log4j.Level;
 
 public class Operators {
 
-    private static Logger rfLogger = LogManager.getLogger("RollingFileLogger");
+    private static Logger fileLogger = LogManager.getLogger("Operators");
 
     private static List<String> supportedOperators = Arrays.asList("+", "-", "*", "/");
     private static List<String> twoArgumentOperators = Arrays.asList("+", "-", "*", "/");
@@ -75,7 +75,7 @@ public class Operators {
                     result = leftOperand / rightOperand;
                     break;
                 } catch (IllegalArgumentException e) {
-                    rfLogger.log(Level.getLevel("INFO"), "Division by 0");
+                    fileLogger.log(Level.getLevel("INFO"), "Division by 0");
                     break;
                 }
             default:

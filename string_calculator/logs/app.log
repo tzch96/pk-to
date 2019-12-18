@@ -1,0 +1,5 @@
+2019-34-18 13:34:23.374 [main] ERROR PostfixEvaluation - java.lang.ClassNotFoundException: F
+2019-34-18 13:34:59.315 [main] ERROR PostfixEvaluation - java.lang.ClassNotFoundException: F
+2019-35-18 13:35:28.809 [main] ERROR PostfixEvaluation - Class f not foud in plugins directory
+2019-36-18 13:36:12.895 [main] ERROR PostfixEvaluation - Class q not found in plugins directory
+2019-36-18 13:36:38.458 [main] ERROR PostfixEvaluation - Class q not found in plugins directory
