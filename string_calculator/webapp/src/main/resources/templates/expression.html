@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>string_calculator</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<form action="#" th:action="@{/calc}" th:object="${expression}" method="post">
+    <input type="text" th:field="*{input}" />
+    <input type="submit" value="Submit" />
+    <input type="reset" vaulue="Reset" />
+</form>
+</body>
+</html>

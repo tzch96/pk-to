@@ -42,4 +42,4 @@ or
 [string_calculator]$ ./run.sh
 ```
 
-Then go to ```localhost:8080/string_calculator``` in your browser.
+Then go to ```localhost:8080/calc``` in your browser.

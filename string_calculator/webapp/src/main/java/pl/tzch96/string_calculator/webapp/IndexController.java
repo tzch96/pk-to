@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.ui.Model;
 
 @RestController
-public class CalculatorController {
+public class IndexController {
     String appName = "string_calculator";
 
     @GetMapping("/")
