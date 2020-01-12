@@ -28,10 +28,18 @@ or
 
 ### Run
 
+##### Console:
 ```bash
-[string_calculator]$ java -jar main/target/main-0.3.0-jar-with-dependencies.jar
+[string_calculator]$ java -jar main/target/main-0.4.0-jar-with-dependencies.jar
+```
+##### Web app:
+```bash
+[string_calculator]$ cd webapp
+[webapp]$ ./mvnw spring-boot:run
 ```
 or
 ```bash
 [string_calculator]$ ./run.sh
 ```
+
+Then go to ```localhost:8080/string_calculator``` in your browser.

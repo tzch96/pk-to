@@ -19,6 +19,7 @@
     <module>common</module>
     <module>implementation</module>
     <module>main</module>
+    <module>webapp</module>
   </modules>
 
   <dependencies>

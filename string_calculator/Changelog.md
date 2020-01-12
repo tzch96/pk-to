@@ -9,7 +9,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
-
+- A web application implementation in Spring Boot
 
 ## 0.3.0 - 2019-12-18
 

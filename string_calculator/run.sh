@@ -1,2 +1,3 @@
 mvn clean install
-java -jar main/target/main-0.4.0-jar-with-dependencies.jar
+#java -jar main/target/main-0.4.0-jar-with-dependencies.jar
+cd webapp && ./mvnw spring-boot:run

@@ -24,6 +24,14 @@ public class Calculator implements ICalculator
         System.out.println("Enter a mathematical expression or type \"exit\" to quit the program:");
     }
 
+    public Double calculate(String expression) {
+        ArrayList<String> tokenizedExpression = ExpressionTokenizer.tokenize(expression);
+        ArrayList<String> postfixExpression = ShuntingYard.infixToPostfix(tokenizedExpression);
+        Double result = PostfixEvaluation.evaluate(postfixExpression);
+
+        return result;
+    }
+
     public void start()
     {
         Scanner sc = new Scanner(System.in);
@@ -38,10 +46,7 @@ public class Calculator implements ICalculator
                 break;
             }
 
-            ArrayList<String> tokenizedExpression = ExpressionTokenizer.tokenize(expression);
-            ArrayList<String> postfixExpression = ShuntingYard.infixToPostfix(tokenizedExpression);
-
-            Double result = PostfixEvaluation.evaluate(postfixExpression);
+            Double result = calculate(expression);
 
             System.out.println("Result: " + result);
         }
