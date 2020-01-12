@@ -28,6 +28,7 @@ public class ShuntingYard extends Operators {
             } else if (token.equals(")")) {
                 while (!operatorStack.peek().equals("(")) {
                     postfix.add(operatorStack.pop());
+                    // TODO add mismatched parentheses exception handling
                 }
 
                 if (operatorStack.peek().equals("(")) {
@@ -40,6 +41,7 @@ public class ShuntingYard extends Operators {
 
         if (!operatorStack.isEmpty()) {
             for (String operator: operatorStack) {
+                // TODO add mismatched parentheses exception handling
                 toRemove.add(operator);
             }
 

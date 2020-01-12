@@ -1,5 +1,11 @@
-2019-34-18 13:34:23.374 [main] ERROR PostfixEvaluation - java.lang.ClassNotFoundException: F
-2019-34-18 13:34:59.315 [main] ERROR PostfixEvaluation - java.lang.ClassNotFoundException: F
-2019-35-18 13:35:28.809 [main] ERROR PostfixEvaluation - Class f not foud in plugins directory
-2019-36-18 13:36:12.895 [main] ERROR PostfixEvaluation - Class q not found in plugins directory
-2019-36-18 13:36:38.458 [main] ERROR PostfixEvaluation - Class q not found in plugins directory
+2019-47-18 13:47:50.522 [main] ERROR PostfixEvaluation - Class arcsin not found in plugins directory
+2019-50-18 13:50:08.924 [main] ERROR PostfixEvaluation - Class f not found in plugins directory
+2020-29-08 12:29:53.219 [main] ERROR PostfixEvaluation - Class aaaaaaaaa not found in plugins directory
+2020-36-12 11:36:53.155 [main] ERROR PostfixEvaluation - Class sin not found in plugins directory
+2020-36-12 11:36:56.093 [main] ERROR PostfixEvaluation - Class sin not found in plugins directory
+2020-37-12 11:37:01.219 [main] ERROR PostfixEvaluation - Class Sin not found in plugins directory
+2020-37-12 11:37:03.608 [main] ERROR PostfixEvaluation - Class SIN not found in plugins directory
+2020-37-12 11:37:05.964 [main] ERROR PostfixEvaluation - Class COS not found in plugins directory
+2020-37-12 11:37:13.357 [main] ERROR PostfixEvaluation - Class Tg not found in plugins directory
+2020-46-12 11:46:38.821 [main] ERROR PostfixEvaluation - Class sin not found in plugins directory
+2020-46-12 11:46:41.039 [main] ERROR PostfixEvaluation - Class sin not found in plugins directory

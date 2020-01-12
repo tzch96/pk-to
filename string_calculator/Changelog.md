@@ -1,6 +1,16 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 0.4.0 - 2019-01-15
+
+### Changed
+
+- Changed function plugin loading to iterate over plugins directory instead of loading from single jar
+
+### Added
+
+
+
 ## 0.3.0 - 2019-12-18
 
 ### Changed

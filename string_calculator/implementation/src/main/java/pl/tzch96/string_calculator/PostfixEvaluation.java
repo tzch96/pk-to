@@ -1,11 +1,13 @@
 package pl.tzch96.string_calculator;
 
+import java.util.List;
 import java.util.ArrayList;
 import java.util.Stack;
 
+import java.nio.file.*;
+import java.io.IOException;
 import java.net.URL;
 import java.net.URLClassLoader;
-import java.net.MalformedURLException;
 import java.lang.reflect.*;
 
 import org.apache.logging.log4j.LogManager;
@@ -19,11 +21,17 @@ public class PostfixEvaluation extends Operators {
     public static Double evaluate(ArrayList<String> postfix) {
         URLClassLoader functionPluginLoader = null;
 
-        try {
-            functionPluginLoader = URLClassLoader.newInstance(new URL[]{new URL("file:plugins/SingleArgFunctions.jar")});
-        } catch (MalformedURLException e) {
+        List<URL> urls = new ArrayList<>();
+
+        try (DirectoryStream<Path> dirStream = Files.newDirectoryStream(Paths.get("plugins"), "*.jar")) {
+            for (Path path: dirStream) {
+                urls.add(path.toUri().toURL());
+            }
+        } catch (IOException e) {
             fileLogger.log(Level.getLevel("ERROR"), e);
         }
+
+        functionPluginLoader = new URLClassLoader(urls.toArray(new URL[urls.size()]));
 
         Stack<Double> operands = new Stack<Double>();
 
