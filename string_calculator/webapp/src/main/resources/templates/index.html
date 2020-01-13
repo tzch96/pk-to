@@ -1,9 +1,15 @@
-<html>
-    <head>
-        <title>string_calculator</title>
-    </head>
-    <body>
-        <h1>Yo</h1>
-        <p>Welcome to <span th:text="${appName}">our app</span></p>
-    </body>
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>string_calculator</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="container">
+    <a href="./calc" class="button-icon"><i class="fa fa-calculator"></i></a>
+</div>
+</body>
 </html>

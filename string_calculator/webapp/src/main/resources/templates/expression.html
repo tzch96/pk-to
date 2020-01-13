@@ -3,12 +3,16 @@
 <head>
     <title>string_calculator</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css"/>
+    <link rel="stylesheet" th:href="@{/css/calc.css}" href="../static/css/calc.css"/>
 </head>
 <body>
-<form action="#" th:action="@{/calc}" th:object="${expression}" method="post">
-    <input type="text" th:field="*{input}" />
-    <input type="submit" value="Submit" />
-    <input type="reset" vaulue="Reset" />
-</form>
+<div class="container">
+    <form name="calculator" action="#" th:action="@{/calc}" th:object="${expression}" method="post">
+        <input type="text" th:field="*{input}" />
+        <input type="button" value="=" onclick="form.submit()" />
+    </form>
+</div>
 </body>
 </html>

@@ -1,14 +1,14 @@
 package pl.tzch96.string_calculator.webapp;
 
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.ui.Model;
 
-@RestController
+@Controller
 public class IndexController {
     String appName = "string_calculator";
 
-    @GetMapping("/")
+    @RequestMapping("/")
     public String indexPage(Model model) {
         model.addAttribute("appName", appName);
         return "index";

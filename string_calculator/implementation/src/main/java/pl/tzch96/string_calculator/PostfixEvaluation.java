@@ -23,7 +23,16 @@ public class PostfixEvaluation extends Operators {
 
         List<URL> urls = new ArrayList<>();
 
-        try (DirectoryStream<Path> dirStream = Files.newDirectoryStream(Paths.get("plugins"), "*.jar")) {
+        String pluginFolderPath;
+        // determine plugin folder relative path depending on run location
+        // "../plugins" for web app, "plugins" for cli
+        if (System.getProperty("user.dir").matches("string_calculator$")) {
+            pluginFolderPath = "plugins";
+        } else {
+            pluginFolderPath = "../plugins";
+        }
+
+        try (DirectoryStream<Path> dirStream = Files.newDirectoryStream(Paths.get(pluginFolderPath), "*.jar")) {
             for (Path path: dirStream) {
                 urls.add(path.toUri().toURL());
             }

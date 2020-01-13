@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - Changed function plugin loading to iterate over plugins directory instead of loading from single jar
+- Made plugin folder path different depending on whether running as a web app or as a CLI app
 
 ### Added
 
